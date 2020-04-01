@@ -1,0 +1,10 @@
+{
+  "name": "ever",
+  "version": "0.1.0",
+  "description": "ever icons",
+  "main": "index.js",
+  "repository": "https://github.com/evericons/ever.git",
+  "author": "isamrish <askmaurya48@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
