@@ -8,7 +8,6 @@ function processSvg(INPUT_URL, OUTPUT_URL, pathTilCurrentDir) {
   fs.mkdirSync(pathTilCurrentDir, {
     recursive: true
   });
-  fs.copyFileSync(INPUT_URL, OUTPUT_URL);
   const file = fs.readFileSync(INPUT_URL, "utf8");
   parseFile(file).then(res => {
     const { attributes } = res;
