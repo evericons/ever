@@ -6,5 +6,16 @@
   "repository": "https://github.com/evericons/ever.git",
   "author": "isamrish <askmaurya48@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "process-svg": "babel --presets es2015 -d lib/ src && node lib/process-svgs.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "path-that-svg": "^1.2.3",
+    "svgson": "^4.0.0"
+  }
 }
