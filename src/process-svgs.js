@@ -10,14 +10,15 @@ function readDirectory(path) {
   let paths = [];
   let files = [];
   res.map(res => {
-    if (fs.lstatSync(`${path}/${res}`).isDirectory()) {
-      paths.push(`${path}/${res}`);
+    const revisedPath = `${path}/${res}`;
+    if (fs.lstatSync(revisedPath).isDirectory()) {
+      paths.push(revisedPath);
     }
     if (
-      fs.lstatSync(`${path}/${res}`).isFile() &&
-      Path.extname(`${path}/${res}`) === ".svg"
+      fs.lstatSync(revisedPath).isFile() &&
+      Path.extname(revisedPath) === ".svg"
     ) {
-      files.push(`${path}/${res}`);
+      files.push(revisedPath);
     }
   });
   return {
